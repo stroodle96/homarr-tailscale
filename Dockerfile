@@ -24,3 +24,4 @@ EXPOSE 7575
 ENV PORT 7575
 
 CMD ["node", "server.js", "start.sh"]
+CMD ["start.sh"]
