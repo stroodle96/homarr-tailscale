@@ -9,13 +9,18 @@ COPY next.config.js ./
 COPY public ./public
 COPY package.json ./package.json
 
+
 # Automatically leverage output traces to reduce image size 
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY .next/standalone ./
 COPY .next/static ./.next/static
 
+#Tailscale Script
+COPY start.sh /usr/bin/start.sh
+RUN chmod +x /usr/bin/start.sh
+
 EXPOSE 7575
 
 ENV PORT 7575
 
-CMD ["node", "server.js"]
+CMD ["node", "server.js", "start.sh"]
