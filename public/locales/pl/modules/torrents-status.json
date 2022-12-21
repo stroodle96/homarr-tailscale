@@ -1,0 +1,40 @@
+{
+  "descriptor": {
+    "name": "Torrent",
+    "description": "Pokaż bieżącą prędkość pobierania obsługiwanych usług",
+    "settings": {
+      "hideComplete": {
+        "label": "Ukryj ukończone torrenty"
+      }
+    }
+  },
+  "card": {
+    "table": {
+      "header": {
+        "name": "Nazwa",
+        "size": "Rozmiar",
+        "download": "Pobieranie",
+        "upload": "Udostępnianie",
+        "estimatedTimeOfArrival": "ETA",
+        "progress": "Postęp"
+      },
+      "body": {
+        "nothingFound": "Nie znaleziono torrentów"
+      }
+    },
+    "lineChart": {
+      "title": "Aktualna prędkość pobierania",
+      "download": "Pobranie: {{download}}",
+      "upload": "Udostępnianie: {{upload}}",
+      "timeSpan": "{{seconds}} sekund temu",
+      "totalDownload": "Pobieranie: {{download}}/s",
+      "totalUpload": "Udostępnianie: {{upload}}/s"
+    },
+    "errors": {
+      "noDownloadClients": {
+        "title": "Nie znaleziono obsługiwanych klientów pobierania!",
+        "text": "Dodaj usługę pobierania, aby wyświetlić aktualnie pobierane pliki"
+      }
+    }
+  }
+}

@@ -6,11 +6,20 @@ import { TablerIcon } from '@tabler/icons';
 
 // Note: Maybe use context to keep track of the modules
 export interface IModule {
+  id: string;
   title: string;
-  description: string;
   icon: TablerIcon;
   component: React.ComponentType;
   options?: Option;
+  padding?: PaddingOptions = {
+    right: 15,
+    top: 15,
+  };
+}
+
+interface PaddingOptions {
+  top: number;
+  right: number;
 }
 
 interface Option {

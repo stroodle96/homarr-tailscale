@@ -1,0 +1,22 @@
+{
+  "pageTitle": {
+    "label": "",
+    "placeholder": ""
+  },
+  "logo": {
+    "label": "Logo"
+  },
+  "favicon": {
+    "label": ""
+  },
+  "background": {
+    "label": ""
+  },
+  "customCSS": {
+    "label": "CSS Personalizado",
+    "placeholder": "O CSS personalizado será executado por último"
+  },
+  "buttons": {
+    "submit": "Enviar"
+  }
+}

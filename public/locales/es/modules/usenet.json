@@ -1,0 +1,49 @@
+{
+  "descriptor": {
+    "name": "Usenet",
+    "description": "Te permite ver la cola e historial de tu usenet (Sabnzbd or NZBGet), pausar y reanudar descargas"
+  },
+  "card": {
+    "errors": {
+      "noDownloadClients": {
+        "title": "¡No se han encontrado clientes de descarga compatibles!",
+        "text": "Añade un servicio de descarga para ver tus descargas actuales"
+      }
+    }
+  },
+  "tabs": {
+    "queue": "Cola",
+    "history": "Historial"
+  },
+  "info": {
+    "sizeLeft": "Tamaño restante",
+    "paused": "Pausado"
+  },
+  "queue": {
+    "header": {
+      "name": "Nombre",
+      "size": "Tamaño",
+      "eta": "Tiempo restante",
+      "progress": "Completado %"
+    },
+    "empty": "Vacío",
+    "error": {
+      "title": "Error",
+      "message": "Ha ocurrido un error"
+    },
+    "paused": "Pausado"
+  },
+  "history": {
+    "header": {
+      "name": "Nombre",
+      "size": "Tamaño",
+      "duration": "Duración"
+    },
+    "empty": "Vacío",
+    "error": {
+      "title": "Error",
+      "message": "Error al cargar historial"
+    },
+    "paused": "Pausado"
+  }
+}

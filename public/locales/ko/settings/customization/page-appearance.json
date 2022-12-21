@@ -1,0 +1,22 @@
+{
+  "pageTitle": {
+    "label": "페이지 제목",
+    "placeholder": "Homarr 🦞"
+  },
+  "logo": {
+    "label": "로고"
+  },
+  "favicon": {
+    "label": "파비콘"
+  },
+  "background": {
+    "label": "배경"
+  },
+  "customCSS": {
+    "label": "커스텀 CSS",
+    "placeholder": "커스텀 CSS는 마지막으로 실행됩니다"
+  },
+  "buttons": {
+    "submit": "적용"
+  }
+}

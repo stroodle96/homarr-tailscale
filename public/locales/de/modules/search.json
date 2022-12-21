@@ -1,0 +1,30 @@
+{
+  "descriptor": {
+    "name": "Suchleiste",
+    "description": "Suchleiste zum Durchsuchen des Internets, von Youtube, Torrents oder Overseerr"
+  },
+  "input": {
+    "placeholder": "Das Internet durchsuchen..."
+  },
+  "switched-to": "",
+  "searchEngines": {
+    "search": {
+      "name": "",
+      "description": ""
+    },
+    "youtube": {
+      "name": "",
+      "description": ""
+    },
+    "torrents": {
+      "name": "",
+      "description": ""
+    },
+    "overseerr": {
+      "name": "Overseerr",
+      "description": ""
+    }
+  },
+  "tip": "",
+  "switchedSearchEngine": ""
+}

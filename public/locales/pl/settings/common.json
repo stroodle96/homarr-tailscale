@@ -1,0 +1,15 @@
+{
+  "title": "Ustawienia",
+  "tooltip": "Ustawienia",
+  "tabs": {
+    "common": "Ogólne",
+    "customizations": "Personalizacja"
+  },
+  "tips": {
+    "configTip": "Prześlij swój plik konfiguracyjny, przeciągając go i upuszczając na stronę!"
+  },
+  "credits": {
+    "madeWithLove": "Wykonane z ❤️ przez @"
+  },
+  "grow": ""
+}

@@ -1,0 +1,49 @@
+{
+  "descriptor": {
+    "name": "",
+    "description": ""
+  },
+  "card": {
+    "errors": {
+      "noDownloadClients": {
+        "title": "Geen ondersteunde download clients gevonden!",
+        "text": "Voeg een downloadservice toe om uw huidige downloads weer te geven"
+      }
+    }
+  },
+  "tabs": {
+    "queue": "Wachtrij",
+    "history": "Geschiedenis"
+  },
+  "info": {
+    "sizeLeft": "Grootte resterend",
+    "paused": "Gepauzeerd"
+  },
+  "queue": {
+    "header": {
+      "name": "Naam",
+      "size": "Grootte",
+      "eta": "ETA",
+      "progress": "Voortgang"
+    },
+    "empty": "Leeg",
+    "error": {
+      "title": "Fout",
+      "message": "Er is een fout opgetreden"
+    },
+    "paused": "Gepauzeerd"
+  },
+  "history": {
+    "header": {
+      "name": "Naam",
+      "size": "Grootte",
+      "duration": "Duur"
+    },
+    "empty": "Leeg",
+    "error": {
+      "title": "Fout",
+      "message": "Fout bij laden geschiedenis"
+    },
+    "paused": "Gepauzeerd"
+  }
+}

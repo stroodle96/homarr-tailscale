@@ -1,0 +1,83 @@
+{
+  "descriptor": {
+    "name": "Docker",
+    "description": "Позволяет легко управлять контейнерами docker"
+  },
+  "search": {
+    "placeholder": "Поиск по имени контейнера или изображения"
+  },
+  "table": {
+    "header": {
+      "name": "Имя",
+      "image": "Изображение",
+      "ports": "Порты",
+      "state": "Государство"
+    },
+    "body": {
+      "portCollapse": "{{ports}} больше"
+    },
+    "states": {
+      "running": "Бег",
+      "created": "Создано",
+      "stopped": "Остановлено",
+      "unknown": "Неизвестно"
+    }
+  },
+  "actionBar": {
+    "addService": {
+      "title": "Добавить сервис",
+      "message": "Добавить услугу в Homarr"
+    },
+    "restart": {
+      "title": "Перезапустить"
+    },
+    "stop": {
+      "title": "Остановить"
+    },
+    "start": {
+      "title": "Начало"
+    },
+    "refreshData": {
+      "title": "Обновить данные"
+    },
+    "remove": {
+      "title": "Удалить"
+    },
+    "addToHomarr": {
+      "title": "Добавить в Homarr"
+    }
+  },
+  "actions": {
+    "start": {
+      "start": "Начало",
+      "end": "Начало"
+    },
+    "stop": {
+      "start": "Остановка",
+      "end": "Остановлено"
+    },
+    "restart": {
+      "start": "Перезапуск",
+      "end": "Перезапущен"
+    },
+    "remove": {
+      "start": "Удаление",
+      "end": "Удалено"
+    }
+  },
+  "errors": {
+    "integrationFailed": {
+      "title": "Сбой интеграции Docker",
+      "message": "Вы забыли смонтировать сокет docker?"
+    },
+    "unknownError": {
+      "title": "Произошла ошибка"
+    },
+    "oneServiceAtATime": {
+      "title": "Пожалуйста, добавляйте только одну услугу за один раз!"
+    }
+  },
+  "actionIcon": {
+    "tooltip": "Docker"
+  }
+}

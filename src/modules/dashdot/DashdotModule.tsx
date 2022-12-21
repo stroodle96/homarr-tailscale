@@ -1,6 +1,7 @@
 import { createStyles, Stack, Title, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import { IconCalendar as CalendarIcon } from '@tabler/icons';
 import axios from 'axios';
+import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
 import { useConfig } from '../../tools/state';
 import { serviceItem } from '../../tools/types';
@@ -9,35 +10,35 @@ import { IModule } from '../ModuleTypes';
 const asModule = <T extends IModule>(t: T) => t;
 export const DashdotModule = asModule({
   title: 'Dash.',
-  description: 'A module for displaying the graphs of your running Dash. instance.',
   icon: CalendarIcon,
   component: DashdotComponent,
   options: {
     cpuMultiView: {
-      name: 'CPU Multi-Core View',
+      name: 'descriptor.settings.cpuMultiView.label',
       value: false,
     },
     storageMultiView: {
-      name: 'Storage Multi-Drive View',
+      name: 'descriptor.settings.storageMultiView.label',
       value: false,
     },
     useCompactView: {
-      name: 'Use Compact View',
+      name: 'descriptor.settings.useCompactView.label',
       value: false,
     },
     graphs: {
-      name: 'Graphs',
+      name: 'descriptor.settings.graphs.label',
       value: ['CPU', 'RAM', 'Storage', 'Network'],
       options: ['CPU', 'RAM', 'Storage', 'Network', 'GPU'],
     },
     url: {
-      name: 'Dash. URL',
+      name: 'descriptor.settings.url.label',
       value: '',
     },
   },
+  id: 'dashdot',
 });
 
-const useStyles = createStyles((theme, _params) => ({
+const useStyles = createStyles((theme, _params, getRef) => ({
   heading: {
     marginTop: 0,
     marginBottom: 10,
@@ -69,6 +70,21 @@ const useStyles = createStyles((theme, _params) => ({
     maxWidth: '100%',
     height: '140px',
     borderRadius: theme.radius.lg,
+    border: 'none',
+    colorScheme: 'none',
+  },
+  graphTitle: {
+    ref: getRef('graphTitle'),
+    position: 'absolute',
+    right: 0,
+    opacity: 0,
+    transition: 'opacity .1s ease-in-out',
+    pointerEvents: 'none',
+  },
+  graphStack: {
+    [`&:hover .${getRef('graphTitle')}`]: {
+      opacity: 0.5,
+    },
   },
 }));
 
@@ -97,7 +113,7 @@ const useJson = (targetUrl: string, url: string) => {
 
   const doRequest = async () => {
     try {
-      const resp = await axios.get(`/api/modules/dashdot?url=${url}&base=${targetUrl}`);
+      const resp = await axios.get('/api/modules/dashdot', { params: { url, base: targetUrl } });
 
       setData(resp.data);
       // eslint-disable-next-line no-empty
@@ -119,8 +135,7 @@ export function DashdotComponent() {
   const { classes } = useStyles();
   const { colorScheme } = useMantineColorScheme();
 
-  const dashConfig = config.modules?.[DashdotModule.title]
-    .options as typeof DashdotModule['options'];
+  const dashConfig = config.modules?.[DashdotModule.id].options as typeof DashdotModule['options'];
   const isCompact = dashConfig?.useCompactView?.value ?? false;
   const dashdotService: serviceItem | undefined = config.services.filter(
     (service) => service.type === 'Dash.'
@@ -141,32 +156,39 @@ export function DashdotComponent() {
   const totalSize =
     (info?.storage?.layout as any[])?.reduce((acc, curr) => (curr.size ?? 0) + acc, 0) ?? 0;
 
+  const { t } = useTranslation('modules/dashdot');
+
   const graphs = [
     {
-      name: 'CPU',
+      id: 'cpu',
+      name: t('card.graphs.cpu.title'),
       enabled: cpuEnabled,
       params: {
         multiView: dashConfig?.cpuMultiView?.value ?? false,
       },
     },
     {
-      name: 'Storage',
+      id: 'storage',
+      name: t('card.graphs.storage.title'),
       enabled: storageEnabled && !isCompact,
       params: {
         multiView: dashConfig?.storageMultiView?.value ?? false,
       },
     },
     {
-      name: 'RAM',
+      id: 'ram',
+      name: t('card.graphs.memory.title'),
       enabled: ramEnabled,
     },
     {
-      name: 'Network',
+      id: 'network',
+      name: t('card.graphs.network.title'),
       enabled: networkEnabled,
       spanTwo: true,
     },
     {
-      name: 'GPU',
+      id: 'gpu',
+      name: t('card.graphs.gpu.title'),
       enabled: gpuEnabled,
       spanTwo: true,
     },
@@ -175,27 +197,24 @@ export function DashdotComponent() {
   if (dashdotUrl === '') {
     return (
       <div>
-        <h2 className={classes.heading}>Dash.</h2>
-        <p>
-          No dash. service found. Please add one to your Homarr dashboard or set a dashdot URL in
-          the module options
-        </p>
+        <h2 className={classes.heading}>{t('card.title')}</h2>
+        <p>{t('card.errors.noService')}</p>
       </div>
     );
   }
 
   return (
     <div>
-      <h2 className={classes.heading}>Dash.</h2>
+      <h2 className={classes.heading}>{t('card.title')}</h2>
 
       {!info ? (
-        <p>Cannot acquire information from dash. - are you running the latest version?</p>
+        <p>{t('card.errors.noInformation')}</p>
       ) : (
         <div className={classes.graphsContainer}>
           <div className={classes.table}>
             {storageEnabled && isCompact && (
               <div className={classes.tableRow}>
-                <p className={classes.tableLabel}>Storage:</p>
+                <p className={classes.tableLabel}>{t('card.graphs.storage.label')}</p>
                 <p className={classes.tableValue}>
                   {((100 * totalUsed) / (totalSize || 1)).toFixed(1)}%{'\n'}
                   {bytePrettyPrint(totalUsed)} / {bytePrettyPrint(totalSize)}
@@ -204,32 +223,37 @@ export function DashdotComponent() {
             )}
             {networkEnabled && (
               <div className={classes.tableRow}>
-                <p className={classes.tableLabel}>Network:</p>
+                <p className={classes.tableLabel}>{t('card.graphs.network.label')}</p>
                 <p className={classes.tableValue}>
-                  {bpsPrettyPrint(info?.network?.speedUp)} Up{'\n'}
-                  {bpsPrettyPrint(info?.network?.speedDown)} Down
+                  {bpsPrettyPrint(info?.network?.speedUp)} {t('card.graphs.network.metrics.upload')}
+                  {'\n'}
+                  {bpsPrettyPrint(info?.network?.speedDown)}
+                  {t('card.graphs.network.metrics.download')}
                 </p>
               </div>
             )}
           </div>
 
           {graphs.map((graph) => (
-            <Stack>
-              <Title style={{ position: 'absolute', right: 0 }} order={4} mt={10} mr={25}>
+            <Stack
+              className={classes.graphStack}
+              style={
+                isCompact
+                  ? {
+                      width: graph.spanTwo ? '100%' : 'calc(50% - 5px)',
+                      position: 'relative',
+                    }
+                  : undefined
+              }
+            >
+              <Title className={classes.graphTitle} order={4} mt={10} mr={25}>
                 {graph.name}
               </Title>
               <iframe
                 className={classes.iframe}
-                style={
-                  isCompact
-                    ? {
-                        width: graph.spanTwo ? '100%' : 'calc(50% - 5px)',
-                      }
-                    : undefined
-                }
                 key={graph.name}
                 title={graph.name}
-                src={`${dashdotUrl}?singleGraphMode=true&graph=${graph.name.toLowerCase()}&theme=${colorScheme}&surface=${(colorScheme ===
+                src={`${dashdotUrl}?singleGraphMode=true&graph=${graph.id.toLowerCase()}&theme=${colorScheme}&surface=${(colorScheme ===
                 'dark'
                   ? theme.colors.dark[7]
                   : theme.colors.gray[0]
@@ -240,7 +264,7 @@ export function DashdotComponent() {
                         .join('&')}`
                     : ''
                 }`}
-                frameBorder="0"
+                allowTransparency
               />
             </Stack>
           ))}

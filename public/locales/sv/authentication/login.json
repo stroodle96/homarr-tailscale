@@ -1,0 +1,27 @@
+{
+  "title": "Välkommen tillbaka!",
+  "text": "Vänligen ange lösenordet",
+  "form": {
+    "fields": {
+      "password": {
+        "label": "Lösenord",
+        "placeholder": "Ditt lösenord"
+      }
+    },
+    "buttons": {
+      "submit": "Logga in"
+    }
+  },
+  "notifications": {
+    "checking": {
+      "title": "Kontrollerar ditt lösenord",
+      "message": "Ditt lösenord kontrolleras..."
+    },
+    "correct": {
+      "title": "Lösenord korrekt, omdirigerar dig..."
+    },
+    "wrong": {
+      "title": "Lösenordet är fel, försök igen."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "pageTitle": {
+    "label": "页面标题",
+    "placeholder": "Homarr 🦞"
+  },
+  "logo": {
+    "label": "徽标"
+  },
+  "favicon": {
+    "label": "网站图标"
+  },
+  "background": {
+    "label": "背景"
+  },
+  "customCSS": {
+    "label": "自定义CSS",
+    "placeholder": "自定义CSS将被最后执行"
+  },
+  "buttons": {
+    "submit": "提交"
+  }
+}

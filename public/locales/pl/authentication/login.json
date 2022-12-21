@@ -1,0 +1,27 @@
+{
+  "title": "Witaj ponownie!",
+  "text": "Wprowadź hasło",
+  "form": {
+    "fields": {
+      "password": {
+        "label": "Hasło",
+        "placeholder": "Twoje hasło"
+      }
+    },
+    "buttons": {
+      "submit": "Zaloguj się"
+    }
+  },
+  "notifications": {
+    "checking": {
+      "title": "Sprawdzanie hasła",
+      "message": "Twoje hasło jest sprawdzane..."
+    },
+    "correct": {
+      "title": "Hasło poprawne, przekierowywanie..."
+    },
+    "wrong": {
+      "title": "To hasło jest nieprawidłowe. Spróbuj ponownie."
+    }
+  }
+}

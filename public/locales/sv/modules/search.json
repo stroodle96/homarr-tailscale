@@ -1,0 +1,30 @@
+{
+  "descriptor": {
+    "name": "Sökfält",
+    "description": "Sökfältet för att söka på webben, Youtube, Torrents eller Overseerr"
+  },
+  "input": {
+    "placeholder": "Sök på webben..."
+  },
+  "switched-to": "Växlade till",
+  "searchEngines": {
+    "search": {
+      "name": "Webb",
+      "description": "Sök med din sökmotor (definierad i inställningar)"
+    },
+    "youtube": {
+      "name": "YouTube",
+      "description": "Sök på YouTube"
+    },
+    "torrents": {
+      "name": "Torrents",
+      "description": "Sök torrents"
+    },
+    "overseerr": {
+      "name": "Overseerr",
+      "description": "Sök efter filmer och TV-program med Overseerr (modulen måste vara aktiverad)"
+    }
+  },
+  "tip": "Du kan välja sökfältet med kortkommandot ",
+  "switchedSearchEngine": "Växlade till att söka med {{searchEngine}}"
+}

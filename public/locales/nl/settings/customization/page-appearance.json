@@ -1,0 +1,22 @@
+{
+  "pageTitle": {
+    "label": "Paginatitel",
+    "placeholder": "Homarr 🦞"
+  },
+  "logo": {
+    "label": "Logo"
+  },
+  "favicon": {
+    "label": "Favicon"
+  },
+  "background": {
+    "label": "Achtergrond"
+  },
+  "customCSS": {
+    "label": "Eigen CSS",
+    "placeholder": "Eigen CSS wordt als laatste uitgevoerd"
+  },
+  "buttons": {
+    "submit": "Indienen"
+  }
+}

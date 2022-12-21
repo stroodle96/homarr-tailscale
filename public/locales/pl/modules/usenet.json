@@ -1,0 +1,49 @@
+{
+  "descriptor": {
+    "name": "Usenet",
+    "description": ""
+  },
+  "card": {
+    "errors": {
+      "noDownloadClients": {
+        "title": "Nie znaleziono obsługiwanych klientów pobierania!",
+        "text": "Dodaj usługę pobierania, aby wyświetlić aktualnie pobierane pliki"
+      }
+    }
+  },
+  "tabs": {
+    "queue": "Kolejka",
+    "history": "Historia"
+  },
+  "info": {
+    "sizeLeft": "",
+    "paused": "Zatrzymane"
+  },
+  "queue": {
+    "header": {
+      "name": "Nazwa",
+      "size": "Rozmiar",
+      "eta": "ETA",
+      "progress": "Postęp"
+    },
+    "empty": "",
+    "error": {
+      "title": "Błąd",
+      "message": "Coś poszło nie tak"
+    },
+    "paused": "Zatrzymane"
+  },
+  "history": {
+    "header": {
+      "name": "Nazwa",
+      "size": "Rozmiar",
+      "duration": ""
+    },
+    "empty": "",
+    "error": {
+      "title": "Błąd",
+      "message": "Wystąpił błąd podczas ładowania historii"
+    },
+    "paused": "Zatrzymane"
+  }
+}

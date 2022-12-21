@@ -3,6 +3,7 @@ import { OptionValues } from '../modules/ModuleTypes';
 
 export interface Settings {
   searchUrl: string;
+  searchNewTab?: boolean;
   title?: string;
   logo?: string;
   favicon?: string;
@@ -10,8 +11,10 @@ export interface Settings {
   secondaryColor?: MantineTheme['primaryColor'];
   primaryShade?: MantineTheme['primaryShade'];
   background?: string;
+  customCSS?: string;
   appOpacity?: number;
   widgetPosition?: string;
+  grow?: boolean;
   appCardWidth?: number;
 }
 
@@ -44,6 +47,7 @@ export const StatusCodes = [
   { value: '401', label: '401 - Unauthorized', group: 'Client error responses' },
   { value: '403', label: '403 - Forbidden', group: 'Client error responses' },
   { value: '404', label: '404 - Not Found', group: 'Client error responses' },
+  { value: '405', label: '405 - Method Not Allowed', group: 'Client error responses' },
   { value: '408', label: '408 - Request Timeout', group: 'Client error responses' },
   { value: '410', label: '410 - Gone', group: 'Client error responses' },
   { value: '429', label: '429 - Too Many Requests', group: 'Client error responses' },
@@ -72,6 +76,8 @@ export const ServiceTypeList = [
   'Transmission',
   'Overseerr',
   'Jellyseerr',
+  'Sabnzbd',
+  'NZBGet',
 ];
 export type ServiceType =
   | 'Other'
@@ -86,7 +92,9 @@ export type ServiceType =
   | 'Sonarr'
   | 'Overseerr'
   | 'Jellyseerr'
-  | 'Transmission';
+  | 'Transmission'
+  | 'Sabnzbd'
+  | 'NZBGet';
 
 export function tryMatchPort(name: string | undefined, form?: any) {
   if (!name) {
@@ -112,6 +120,8 @@ export const portmap = [
   { name: 'emby', value: '8096' },
   { name: 'overseerr', value: '5055' },
   { name: 'dash.', value: '3001' },
+  { name: 'sabnzbd', value: '8080' },
+  { name: 'nzbget', value: '6789' },
 ];
 
 export const MatchingImages: {
@@ -183,5 +193,6 @@ export interface serviceItem {
   username?: string;
   openedUrl?: string;
   newTab?: boolean;
+  ping?: boolean;
   status?: string[];
 }

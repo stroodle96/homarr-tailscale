@@ -1,0 +1,22 @@
+{
+  "pageTitle": {
+    "label": "Titolo pagina",
+    "placeholder": "Homarr 🦞"
+  },
+  "logo": {
+    "label": "Logo"
+  },
+  "favicon": {
+    "label": "Favicon"
+  },
+  "background": {
+    "label": "Sfondo"
+  },
+  "customCSS": {
+    "label": "CSS personalizzato",
+    "placeholder": "I CSS personalizzati saranno eseguiti per ultimi"
+  },
+  "buttons": {
+    "submit": "Invia"
+  }
+}

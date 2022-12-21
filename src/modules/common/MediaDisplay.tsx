@@ -1,5 +1,6 @@
 import { Badge, Button, Group, Image, Stack, Text, Title } from '@mantine/core';
 import { IconDownload, IconExternalLink, IconPlayerPlay } from '@tabler/icons';
+import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
 import { useColorTheme } from '../../tools/color';
 import { useConfig } from '../../tools/state';
@@ -159,9 +160,10 @@ export function SonarrMediaDisplay(props: any) {
 export function MediaDisplay({ media }: { media: IMedia }) {
   const [opened, setOpened] = useState(false);
   const { secondaryColor } = useColorTheme();
+  const { t } = useTranslation('modules/common-media-cards');
 
   return (
-    <Group mr="xs" align="stretch" noWrap style={{ maxHeight: 200 }}>
+    <Group mr="xs" align="stretch" noWrap style={{ maxHeight: 200 }} spacing="xs">
       <Image src={media.poster} height={200} width={150} radius="md" fit="cover" />
       <Stack justify="space-around">
         <Stack spacing="sm">
@@ -209,7 +211,7 @@ export function MediaDisplay({ media }: { media: IMedia }) {
               size="sm"
               rightIcon={<IconPlayerPlay size={15} />}
             >
-              Play
+              {t('buttons.play')}
             </Button>
           )}
           {media.imdbId && (
@@ -249,7 +251,7 @@ export function MediaDisplay({ media }: { media: IMedia }) {
                 size="sm"
                 rightIcon={<IconDownload size={15} />}
               >
-                Request
+                {t('buttons.request')}
               </Button>
             </>
           )}

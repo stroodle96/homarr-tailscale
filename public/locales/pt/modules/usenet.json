@@ -1,0 +1,49 @@
+{
+  "descriptor": {
+    "name": "",
+    "description": ""
+  },
+  "card": {
+    "errors": {
+      "noDownloadClients": {
+        "title": "Nenhum cliente de download suportado encontrado!",
+        "text": "Adicione um serviço de download para ver seus downloads atuais"
+      }
+    }
+  },
+  "tabs": {
+    "queue": "Fila",
+    "history": "Histórico"
+  },
+  "info": {
+    "sizeLeft": "Tamanho restante",
+    "paused": "Pausado"
+  },
+  "queue": {
+    "header": {
+      "name": "Nome",
+      "size": "Tamanho",
+      "eta": "TED",
+      "progress": "Progresso"
+    },
+    "empty": "Vazio",
+    "error": {
+      "title": "Erro",
+      "message": "Ocorreu um erro"
+    },
+    "paused": "Pausado"
+  },
+  "history": {
+    "header": {
+      "name": "Nome",
+      "size": "Tamanho",
+      "duration": "Duração"
+    },
+    "empty": "Vazio",
+    "error": {
+      "title": "Erro",
+      "message": "Erro ao carregar histórico"
+    },
+    "paused": "Pausado"
+  }
+}

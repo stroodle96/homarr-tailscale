@@ -1,0 +1,30 @@
+{
+  "descriptor": {
+    "name": "Iskalna vrstica",
+    "description": "Iskalna vrstica za iskanje po spletu, YouTubu, torrentih ali Overseerru"
+  },
+  "input": {
+    "placeholder": "Preišči splet..."
+  },
+  "switched-to": "",
+  "searchEngines": {
+    "search": {
+      "name": "",
+      "description": ""
+    },
+    "youtube": {
+      "name": "",
+      "description": ""
+    },
+    "torrents": {
+      "name": "",
+      "description": ""
+    },
+    "overseerr": {
+      "name": "Overseerr",
+      "description": ""
+    }
+  },
+  "tip": "",
+  "switchedSearchEngine": ""
+}

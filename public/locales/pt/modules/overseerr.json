@@ -1,0 +1,30 @@
+{
+  "descriptor": {
+    "name": "Overseerr",
+    "description": "Permite que você pesquise e adicione conteúdo do Overseerr/Jellyseerr"
+  },
+  "popup": {
+    "item": {
+      "buttons": {
+        "askFor": "Solicitar {{title}}",
+        "cancel": "Cancelar",
+        "request": "Solicitar"
+      },
+      "alerts": {
+        "automaticApproval": {
+          "title": "Usando chave da API",
+          "text": "Este pedido será aprovado automaticamente"
+        }
+      }
+    },
+    "seasonSelector": {
+      "caption": "Marque as temporadas que você deseja que sejam baixadas",
+      "table": {
+        "header": {
+          "season": "Temporada",
+          "numberOfEpisodes": "Número de episódios"
+        }
+      }
+    }
+  }
+}

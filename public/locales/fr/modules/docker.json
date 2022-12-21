@@ -1,0 +1,83 @@
+{
+  "descriptor": {
+    "name": "Docker",
+    "description": "Vous permet de gérer facilement vos conteneurs docker"
+  },
+  "search": {
+    "placeholder": "Recherche par nom de conteneur ou d'image"
+  },
+  "table": {
+    "header": {
+      "name": "Nom",
+      "image": "Image",
+      "ports": "Ports",
+      "state": "État"
+    },
+    "body": {
+      "portCollapse": "{{ports}} plus"
+    },
+    "states": {
+      "running": "Running",
+      "created": "Créé",
+      "stopped": "Arrêté",
+      "unknown": "Inconnu"
+    }
+  },
+  "actionBar": {
+    "addService": {
+      "title": "Ajouter un service",
+      "message": "Ajouter un service à Homarr"
+    },
+    "restart": {
+      "title": "Redémarrer"
+    },
+    "stop": {
+      "title": "Stop"
+    },
+    "start": {
+      "title": "Début"
+    },
+    "refreshData": {
+      "title": "Rafraîchir les données"
+    },
+    "remove": {
+      "title": "Retirer"
+    },
+    "addToHomarr": {
+      "title": "Ajouter à Homarr"
+    }
+  },
+  "actions": {
+    "start": {
+      "start": "Démarrage en cours",
+      "end": "Démarré"
+    },
+    "stop": {
+      "start": "Arrêt en cours",
+      "end": "Arrêté"
+    },
+    "restart": {
+      "start": "Redémarrage en cours",
+      "end": "Redémarré"
+    },
+    "remove": {
+      "start": "Suppression en cours",
+      "end": "Supprimé"
+    }
+  },
+  "errors": {
+    "integrationFailed": {
+      "title": "L'intégration de Docker a échoué",
+      "message": "Avez-vous oublié de monter le docker socket ?"
+    },
+    "unknownError": {
+      "title": "Une erreur s’est produite"
+    },
+    "oneServiceAtATime": {
+      "title": "Veuillez n'ajouter qu'un seul service à la fois !"
+    }
+  },
+  "actionIcon": {
+    "tooltip": "Docker"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "accordions": {
+    "downloads": {
+      "text": "Pobrane pliki",
+      "torrents": "Twoje torrenty",
+      "usenet": "Twoje pliki Usenet"
+    },
+    "others": {
+      "text": "Pozostałe"
+    }
+  }
+}

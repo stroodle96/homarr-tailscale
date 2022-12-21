@@ -1,0 +1,49 @@
+{
+  "descriptor": {
+    "name": "Usenet",
+    "description": "Permette di vedere la coda e la cronologia di usenet (Sabnzbd o NZBGet), di mettere in pausa e riprendere i download"
+  },
+  "card": {
+    "errors": {
+      "noDownloadClients": {
+        "title": "Nessun client di download supportato trovato!",
+        "text": "Aggiungi un servizio di download per visualizzare i tuoi download attuali"
+      }
+    }
+  },
+  "tabs": {
+    "queue": "Coda",
+    "history": "Storia"
+  },
+  "info": {
+    "sizeLeft": "Dimensione rimanente",
+    "paused": "In pausa"
+  },
+  "queue": {
+    "header": {
+      "name": "Nome",
+      "size": "Dimensione",
+      "eta": "ETA",
+      "progress": "Avanzamento"
+    },
+    "empty": "Vuoto",
+    "error": {
+      "title": "Errore",
+      "message": "Si è verificato un errore"
+    },
+    "paused": "In pausa"
+  },
+  "history": {
+    "header": {
+      "name": "Nome",
+      "size": "Dimensione",
+      "duration": "Durata"
+    },
+    "empty": "Vuoto",
+    "error": {
+      "title": "Errore",
+      "message": "Errore nel caricamento della cronologia"
+    },
+    "paused": "In pausa"
+  }
+}

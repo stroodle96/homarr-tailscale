@@ -7,6 +7,7 @@ import {
   ScrollArea,
   createStyles,
   useMantineTheme,
+  Space,
 } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 import { Calendar } from '@mantine/dates';
@@ -26,16 +27,15 @@ import { useColorTheme } from '../../tools/color';
 
 export const CalendarModule: IModule = {
   title: 'Calendar',
-  description:
-    'A calendar module for displaying upcoming releases. It interacts with the Sonarr and Radarr API.',
   icon: CalendarIcon,
   component: CalendarComponent,
   options: {
     sundaystart: {
-      name: 'Start the week on Sunday',
+      name: 'descriptor.settings.sundayStart.label',
       value: false,
     },
   },
+  id: 'calendar',
 };
 
 export default function CalendarComponent(props: any) {
@@ -128,7 +128,7 @@ export default function CalendarComponent(props: any) {
   }, [config.services]);
 
   const weekStartsAtSunday =
-    (config?.modules?.[CalendarModule.title]?.options?.sundaystart?.value as boolean) ?? false;
+    (config?.modules?.[CalendarModule.id]?.options?.sundaystart?.value as boolean) ?? false;
   return (
     <Calendar
       firstDayOfWeek={weekStartsAtSunday ? 'sunday' : 'monday'}
@@ -138,15 +138,12 @@ export default function CalendarComponent(props: any) {
           ? {
               backgroundColor:
                 theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
+              margin: 1,
             }
-          : {}
+          : {
+              margin: 1,
+            }
       }
-      styles={{
-        calendarHeader: {
-          marginRight: 15,
-          marginLeft: 15,
-        },
-      }}
       allowLevelChange={false}
       dayClassName={(date, modifiers) => cx({ [classes.weekend]: modifiers.weekend })}
       renderDay={(renderdate) => (
@@ -276,10 +273,11 @@ function DayComponent(props: any) {
           scrollbarSize={5}
           style={{
             height:
-              totalFiltered.slice(0, 2).length > 1 ? totalFiltered.slice(0, 2).length * 150 : 200,
+              totalFiltered.slice(0, 2).length > 1 ? totalFiltered.slice(0, 2).length * 150 : 220,
             width: 400,
           }}
         >
+          <Space mt={5} />
           {sonarrFiltered.map((media: any, index: number) => (
             <React.Fragment key={index}>
               <SonarrMediaDisplay media={media} />

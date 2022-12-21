@@ -1,0 +1,32 @@
+{
+  "descriptor": {
+    "name": "Väder",
+    "description": "Se det aktuella vädret på din plats",
+    "settings": {
+      "displayInFahrenheit": {
+        "label": "Visa i Fahrenheit"
+      },
+      "location": {
+        "label": "Plats för väder"
+      }
+    }
+  },
+  "card": {
+    "weatherDescriptions": {
+      "clear": "Klart",
+      "mainlyClear": "Främst klart",
+      "fog": "Dimma",
+      "drizzle": "Duggregn",
+      "freezingDrizzle": "Underkylt duggregn",
+      "rain": "Regn",
+      "freezingRain": "Underkylt regn",
+      "snowFall": "Snöfall",
+      "snowGrains": "Snökorn",
+      "rainShowers": "Regnskurar",
+      "snowShowers": "Snöblandat regn",
+      "thunderstorm": "Åska",
+      "thunderstormWithHail": "Åskväder med hagel",
+      "unknown": "Okänd"
+    }
+  }
+}

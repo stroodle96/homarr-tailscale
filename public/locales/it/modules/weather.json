@@ -1,0 +1,32 @@
+{
+  "descriptor": {
+    "name": "Meteo",
+    "description": "Consulta il meteo attuale della propria località",
+    "settings": {
+      "displayInFahrenheit": {
+        "label": "Mostra in Fahrenheit"
+      },
+      "location": {
+        "label": "Località meteo"
+      }
+    }
+  },
+  "card": {
+    "weatherDescriptions": {
+      "clear": "Sereno",
+      "mainlyClear": "Per lo più sereno",
+      "fog": "Nebbia",
+      "drizzle": "Pioggia leggera",
+      "freezingDrizzle": "Pioggia leggera gelata",
+      "rain": "Pioggia",
+      "freezingRain": "Pioggia gelata",
+      "snowFall": "Neve",
+      "snowGrains": "Neve tonda",
+      "rainShowers": "Rovesci",
+      "snowShowers": "Forti nevicate",
+      "thunderstorm": "Temporale",
+      "thunderstormWithHail": "Temporale con grandine",
+      "unknown": "Sconosciuto"
+    }
+  }
+}

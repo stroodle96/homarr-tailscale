@@ -1,3 +1,4 @@
+import Consola from 'consola';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 function Post(req: NextApiRequest, res: NextApiResponse) {
@@ -8,13 +9,19 @@ function Post(req: NextApiRequest, res: NextApiResponse) {
       success: true,
     });
   }
+  // Warn that there was a wrong password attempt (date : wrong password, person's IP)
+  Consola.warn(
+    `${new Date().toLocaleString()} : Wrong password attempt, from ${
+      req.headers['x-forwarded-for']
+    }`
+  );
   return res.status(200).json({
     success: false,
   });
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  // Filter out if the reuqest is a POST or a GET
+  // Filter out if the request is a POST or a GET
   if (req.method === 'POST') {
     return Post(req, res);
   }

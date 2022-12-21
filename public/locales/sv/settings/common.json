@@ -1,0 +1,15 @@
+{
+  "title": "Inställningar",
+  "tooltip": "Inställningar",
+  "tabs": {
+    "common": "Allmänt",
+    "customizations": "Anpassningar"
+  },
+  "tips": {
+    "configTip": "Ladda upp din konfigurationsfil genom att dra och släppa den på sidan!"
+  },
+  "credits": {
+    "madeWithLove": "Gjort med ❤️ av @"
+  },
+  "grow": "Växande rutnät (ta allt utrymme)"
+}

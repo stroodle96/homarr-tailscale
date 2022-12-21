@@ -1,0 +1,49 @@
+{
+  "descriptor": {
+    "name": "",
+    "description": ""
+  },
+  "card": {
+    "errors": {
+      "noDownloadClients": {
+        "title": "没有找到支持的下载客户端！",
+        "text": "添加下载服务，查看你当前的下载量"
+      }
+    }
+  },
+  "tabs": {
+    "queue": "队列",
+    "history": "历史"
+  },
+  "info": {
+    "sizeLeft": "左侧尺寸调整",
+    "paused": "暂停使用"
+  },
+  "queue": {
+    "header": {
+      "name": "名称",
+      "size": "大小",
+      "eta": "剩余时间",
+      "progress": "进度"
+    },
+    "empty": "空的",
+    "error": {
+      "title": "错误",
+      "message": "出错了"
+    },
+    "paused": "暂停使用"
+  },
+  "history": {
+    "header": {
+      "name": "名称",
+      "size": "大小",
+      "duration": "持续时间"
+    },
+    "empty": "空的",
+    "error": {
+      "title": "错误",
+      "message": "加载历史记录时出错"
+    },
+    "paused": "暂停使用"
+  }
+}

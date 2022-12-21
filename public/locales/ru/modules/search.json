@@ -1,0 +1,30 @@
+{
+  "descriptor": {
+    "name": "Поиск",
+    "description": "Строка поиска для поиска в Интернете, Youtube, Torrents или Overseerr"
+  },
+  "input": {
+    "placeholder": "Искать в интернете..."
+  },
+  "switched-to": "",
+  "searchEngines": {
+    "search": {
+      "name": "",
+      "description": ""
+    },
+    "youtube": {
+      "name": "",
+      "description": ""
+    },
+    "torrents": {
+      "name": "",
+      "description": ""
+    },
+    "overseerr": {
+      "name": "Overseerr",
+      "description": ""
+    }
+  },
+  "tip": "",
+  "switchedSearchEngine": ""
+}

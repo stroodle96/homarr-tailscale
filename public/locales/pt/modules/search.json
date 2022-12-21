@@ -1,0 +1,30 @@
+{
+  "descriptor": {
+    "name": "Barra de pesquisa",
+    "description": "Barra de pesquisa para pesquisar na ‘internet’, YouTube, torrents ou Overseerr"
+  },
+  "input": {
+    "placeholder": "Pesquisar na Internet..."
+  },
+  "switched-to": "",
+  "searchEngines": {
+    "search": {
+      "name": "",
+      "description": ""
+    },
+    "youtube": {
+      "name": "",
+      "description": ""
+    },
+    "torrents": {
+      "name": "",
+      "description": ""
+    },
+    "overseerr": {
+      "name": "Overseerr",
+      "description": ""
+    }
+  },
+  "tip": "",
+  "switchedSearchEngine": ""
+}
